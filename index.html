@@ -9,31 +9,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
-<body>
-    <main>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+<body class="">
+    <main class="w-100">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" id="barra">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="imagenes_integrador_front/codoacodo.png" alt="codoacodo" id="logo_codo">
                 Conf Bs As</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse d-flex justify-content-end bg-dark" id="navbarSupportedContent">
                     <ul class="nav nav-tab justify-content-center">
-                        <li class="">
-                          <a class="" aria-current="page" href="#conferencia">La conferencia</a>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="#conferencia">La conferencia</a>
                         </li>
-                        <li class="">
-                          <a class="" href="#oradores">Los oradores</a>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#oradores">Los oradores</a>
                         </li>
-                        <li class="">
-                          <a class="" href="#lugar">El lugar y la fecha</a>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#lugar">El lugar y la fecha</a>
                         </li>
-                        <li class="">
-                          <a class="" href="#orador">Conviértete en orador</a>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#orador">Conviértete en orador</a>
                         </li>
-                        <li class="">
-                            <a class="" href="#comprar">Comprar tickets</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#comprar" id="ticket">Comprar tickets</a>
                           </li>
                       </ul>
                       <!--
@@ -58,20 +58,29 @@
                 </div>
             </div>
         </nav>
-        <div id="conferencia" class="carousel slide" data-bs-ride="carousel">
+        <div id="conferencia" class="carousel slide" data-bs-ride="carousel" id="carrousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="imagenes_integrador_front/hawaii.jpg" class="d-block w-100" alt="Hawaii">
+                    <img src="imagenes_integrador_front/hawaii.jpg" class="d-block" alt="Hawaii">
+                    <div class="carousel-caption opaco">
+                        <h3>Texto sobre la imagen</h3>
+                    </div>
+                </div><!--
+                <div class="carousel-item">
+                    <img src="imagenes_integrador_front/hawaii3.jpg" class="d-block" alt="hawaii2">
+                    <div class="carousel-caption opaco">
+                        <h3>Texto sobre la imagen</h3>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="imagenes_integrador_front/honolulu.jpg" class="d-block" alt="hawaii3">
+                    <div class="carousel-caption opaco">
+                        <h3>Texto sobre la imagen</h3>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="imagenes_integrador_front/hawaii3.jpg" class="d-block w-100" alt="hawaii2">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagenes_integrador_front/honolulu.jpg" class="d-block w-100" alt="hawaii3">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagenes_integrador_front/hawaii2.jpg" class="d-block w-100" alt="honolulu">
-                </div>
+                    <img src="imagenes_integrador_front/hawaii2.jpg" class="d-block" alt="honolulu">
+                </div>-->
             </div>
         </div>
 
@@ -85,29 +94,31 @@
             <div class="row mb-3 d-flex justify-content-center">
                 <div class="col-3 border p-0 separador">
                     <img src="imagenes_integrador_front/steve.jpg" alt=""  class="w-100 m-0" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <a class="btn btn-secondary" href="#">Javascript</a>
-                    <a class="btn btn-secondary" href="#">React</a>
-                    <h2 class="fw-normal">Heading</h2>
+                    <a class="btn btn-warning" href="#">Javascript</a>
+                    <a class="btn btn-info" href="#">React</a>
+                    <h2 class="fw-normal">Steve Jobs</h2>
                     <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
                 </div>
                 <div class="col-3 border p-0 separador">
                     <img src="imagenes_integrador_front/bill.jpg" alt=""  class="w-100 m-0" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <a class="btn btn-secondary" href="#">Javascript</a>
-                        <a class="btn btn-secondary" href="#">React</a>
-                    <h2 class="fw-normal">Heading</h2>
+                    <a class="btn btn-warning" href="#">Javascript</a>
+                        <a class="btn btn-info" href="#">React</a>
+                    <h2 class="fw-normal">Bill Gates</h2>
                     <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>  
                 </div>
                 <div class="col-3 border p-0">
                     <img src="imagenes_integrador_front/ada.jpeg" alt=""  class="w-100 m-0" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <div>
                     <a class="btn btn-secondary" href="#">Negocios</a>
-                    <a class="btn btn-secondary" href="#">startups</a>
-                    <h2 class="fw-normal">Heading</h2>
+                    <a class="btn btn-danger" href="#">startups</a>
+                    <h2 class="fw-normal">Ada Lovelace</h2>
+                </div>
                     <p>And lastly this, the third column of representative placeholder content.</p>
                 </div>
             </div>
         </div>
 
-            <div class="row featurette">
+            <div class="row featurette w-100">
                 <div class="col-md-6 order-md-2">
                   <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
                   <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>

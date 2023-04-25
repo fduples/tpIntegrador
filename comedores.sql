@@ -58,3 +58,13 @@ CREATE TABLE `test`.`proveedor` (
    `deleted_at` DATETIME NOT NULL,
    PRIMARY KEY (`id`)
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+
+SELECT r.solicitante, r.cantidad, oc.descripcion, p.nombre as proveedor, s.nombre as solicitante, se.nombre as servicio, cc.precio_unitario, cc.cantidad, (cc.precio_unitario * cc.cantidad) as Total
+FROM remito r
+INNER JOIN orden_compra oc ON r.orden_compra_id = oc.id
+INNER JOIN cuenta_corriente cc ON oc.id = cc.orden_compra_id
+INNER JOIN proveedor p ON oc.proveedor_id = p.id
+INNER JOIN solicitante s ON r.solicitante = s.codigo_ean
+INNER JOIN servicio se ON cc.tipo_servicio_id = se.tipo_de_servicio_id
+WHERE r.fecha = '2022-12-16';

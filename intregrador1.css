@@ -1,16 +1,40 @@
+#barra {
+    position: sticky !important;
+    top: 0% !important;
+    z-index: 10 !important;
+}
+
+#carrousel {
+    z-index: 10;
+}
+
+
 #logo_codo {
-    width: 10%;
+    width: 30%;
+}
+
+.opaco {
+    background-size: contain !important;
+    background-color: black;
+    opacity: 1;
 }
 
 .separador {
     margin-right: 3% !important;
 }
 
-.nav-link .active {
+#ticket {
     color: green !important;
-  }
+}
 
+#ticket:hover {
+    color: rgb(214, 231, 30) !important;
+}
 
-a:active {
-    color: green;
+.nav-link {
+    color: aliceblue !important;
+}
+
+.nav-link:hover {
+    color: gray !important;
 }
