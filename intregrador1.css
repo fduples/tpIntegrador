@@ -16,9 +16,38 @@
 #logo_codo {
     width: 30%;
 }
+#codo {
+width: 30% !important;
+}
 
 .texto {
     color: white;
+    font-size: 1.3rem;
+}
+
+.texto p {
+    font-size: 0.8rem;
+}
+
+.texto a{
+    line-height: 2rem;
+}
+
+#boton {
+    background-color: #8acf30;
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+p > span {
+    border-bottom: 2px dotted !important;
+}
+
+#aclara {
+    line-height: 0.5rem;
+    font-size: smaller;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .opaco-frente {
@@ -52,12 +81,15 @@
     width: 40%;
 }
 
-.referencia p{
-    
-}
-
 .separador {
     margin-right: 3% !important;
+}
+
+.separador a {
+    font-size: smaller !important;
+    line-height: 0.4rem;
+    font-weight: bold;
+    padding: 2%;
 }
 
 #ticket {
@@ -68,10 +100,25 @@
     color: rgb(214, 231, 30) !important;
 }
 
-.nav-link {
-    color: aliceblue !important;
+footer {
+    margin-top: 1%;
+    background-color: #315664;
+    line-height: 2rem;
 }
 
-.nav-link:hover {
+footer .nav-item {
+    display: flex;
+    align-items: center;
+    width: 14%;
+    margin-right: 0.1rem;
+}
+
+footer .nav-link {
+    font-size: small;
+    color: aliceblue !important;
+    line-height: 1rem;
+}
+
+footer .nav-link:hover {
     color: gray !important;
 }
