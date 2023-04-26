@@ -4,8 +4,12 @@
     z-index: 10 !important;
 }
 
+#barra ul {
+    margin-right: 10%;
+}
+
 #carrousel {
-    z-index: 10;
+    z-index: 9;
 }
 
 
@@ -13,10 +17,43 @@
     width: 30%;
 }
 
+.texto {
+    color: white;
+}
+
+.opaco-frente {
+    z-index: 9;
+    background-size: contain !important;
+    opacity: 1;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .opaco {
     background-size: contain !important;
     background-color: black;
-    opacity: 1;
+    opacity: 0.3;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+}
+
+.referencia{
+    color: white !important;
+    margin-right: 10%;
+    opacity: 1 !important;
+    text-align: end;
+    width: 40%;
+}
+
+.referencia p{
+    
 }
 
 .separador {
