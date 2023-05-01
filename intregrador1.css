@@ -2,6 +2,8 @@
 // LOS ELEMENTOS SE ENCUENTRAN ORDENADOS ALFABETICAMENTE SIN DISTINCION DE CLASE ETIQUETA O ID //
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #aclara {
     line-height: 0.5rem;
     font-size: smaller;
@@ -17,6 +19,10 @@
 
 #barra ul {
     margin-right: 10%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 #boton {
