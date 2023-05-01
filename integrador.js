@@ -25,33 +25,27 @@ function traerDatos() {
     var apellido = document.getElementById('apellido').value;
     var tema = document.getElementById('tema').value;
 
-    if (nombre === "") {
-        nombre = "Sin dato";
-    } 
-    if (apellido === "") {
-        apellido = "Sin dato";
-    } 
-    if (tema === "") {
-        tema = "Sin dato";
-    }
+    //verifico que no haya datos vacíos y con un prompt los completamos.
+    
+    nombre = (nombre === "") ? prompt("Debe Ingresar su nombre:", "Sin Dato") : nombre;
 
-  // guardo en un diccionario la información obtenida del form
+    apellido = (apellido === "") ? prompt("Debe Ingresar su Apellido:", "Sin Dato") : apellido;
+    
+    tema = (tema === "") ? prompt("Debe Ingresar el tema del que quiere hablar:", "Sin Dato"): tema;
+
+  // guardo la información obtenida del form
     document.getElementById('nombreModal').innerHTML = nombre;
     document.getElementById('apellidoModal').innerHTML = apellido;
     document.getElementById('temaModal').innerHTML = tema;
 }
 
 function limpiar() {
+  //obtengo la información del modal y la guardo en respectivas variables
     var nombre = document.getElementById('nombreModal').innerHTML;
     var apellido = document.getElementById('apellidoModal').innerHTML;
     var tema = document.getElementById('temaModal').innerHTML;
-    if (nombre === "Sin dato") {
-        alert('Hay información sin completar. Complete el formulario y vuelva a enviarlo.');
-        return false;
-    } else if (apellido === "Sin dato") {
-        alert('Hay información sin completar. Complete el formulario y vuelva a enviarlo.');
-        return false;
-    } else if (tema === "Sin dato") {
+    //Compruebo que no haya ni datos vacíos ni canpos con valor "sin dato".
+    if ((nombre === "Sin Dato" || nombre === "") || (apellido === "Sin Dato" || apellido === "")|| (tema === "Sin Dato" || tema === "")) {
         alert('Hay información sin completar. Complete el formulario y vuelva a enviarlo.');
         return false;
     }
