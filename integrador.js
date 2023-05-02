@@ -1,3 +1,40 @@
+//Intento de event listener para el modal de compra
+const orador = document.getElementById('oradorCompra');
+const precioOrador = document.getElementById('precioOrador');
+const cantidad = document.getElementById('cantTickets');
+const total = document.getElementById('totalTickets');
+const precioJobs = 1350;
+const precioGates = 1500;
+const precioAda = 1800;
+var precio = 0;
+
+orador.addEventListener('change', () => {
+    let oradorSeleccionado = orador.value;
+    if (oradorSeleccionado === "opcion1") {
+      precioOrador.innerHTML = '$'+precioJobs;
+      precio = precioJobs
+    } else if (oradorSeleccionado === "opcion2") {
+      precioOrador.innerHTML = '$'+precioGates;
+      precio = precioGates;
+    } else if (oradorSeleccionado === "opcion3") {
+      precioOrador.innerHTML = '$'+precioAda;
+      precio = precioAda;
+    } else {
+      precioOrador.innerHTML = 'Elija un orador';
+      precio = 0;
+    }
+    //modifico el monto total cuando se cambia la seleccion de orador.
+    let cant = cantidad.value;
+    total.value = cant * precio;
+});
+
+//Este evento hace que se modifique el monto total cuano cambio la cantidad de entradas 
+cantidad.addEventListener('change', () => {
+  let cant = cantidad.value;
+  total.value = cant * precio;
+})
+
+
 // Código de bootstrap para el modal //
 const exampleModal = document.getElementById('exampleModal')
 if (exampleModal) {
@@ -49,9 +86,21 @@ function limpiar() {
         alert('Hay información sin completar. Complete el formulario y vuelva a enviarlo.');
         return false;
     }
-
+    //borro los datos del formulario para que se pueda cargar otro
     document.getElementById('nombre').value = '';
     document.getElementById('apellido').value = '';
     document.getElementById('tema').value = '';
     alert('El formulario ha sido enviado');
 }
+
+
+function limpiarCompra() {
+  orador.value = 'opcion0';
+  document.getElementById('nombreCompra').value = '';
+  document.getElementById('apellidoCompra').value = '';
+  document.getElementById('dia').value = '';
+  cantidad.value = 0;
+  total.value = 0;
+  precioOrador.innerHTML = 'Seleccione un orador';
+}
+
